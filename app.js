@@ -3,6 +3,8 @@ const path = require('path')
 
 const app = express()
 
+const port = process.env.PORT || 3000
+
 app.get('/people', (req, res) => {
     res.json([
         {
@@ -24,6 +26,6 @@ app.get('/people', (req, res) => {
     ])
 })
 
-app.listen(80, () => {
-    console.log('Listening on port 80')
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`)
 })
